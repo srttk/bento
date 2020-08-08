@@ -1,5 +1,4 @@
-# A React Graphql Starter Template
-
+# A React Graphql Starter
 
 - React / Nextjs
 - Apollo Graphql Server

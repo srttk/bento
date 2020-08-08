@@ -1,5 +1,6 @@
 import React from 'react';
-import { useQuery } from '../lib/gql-client';
+import Banner from '@/components/Banner'
+import { useQuery } from '@/lib/gql-client'
 
 const HELLO_QUERY = `
     {
@@ -10,10 +11,10 @@ const HELLO_QUERY = `
 const Index: React.FC = () => {
     const { data, error, loading } = useQuery(HELLO_QUERY)
     return (
-        <div>
+        <div className="app">
             { error && <p>Error</p>}
             { loading && <p>Loading</p> }
-            {data && <h1>{data.hello} Bento</h1>}
+            {data && <Banner title={`${data.hello} Bento`}/>}
         </div>
     );
 }

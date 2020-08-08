@@ -1,0 +1,29 @@
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write you own custom component styles here */
+
+.app {
+    @apply text-center;
+}
+
+
+.title {
+    @apply text-red-500 text-6xl font-thin inline bg-white px-2 py-1 rounded shadow;
+}
+
+
+
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
