@@ -2,6 +2,11 @@
 @tailwind base;
 /* purgecss end ignore */
 
+html, body, #__next {
+    position: relative;
+    height: 100%;
+}
+
 /* Write your own custom base styles here */
 
 /* Start purging... */
@@ -10,13 +15,11 @@
 
 /* Write you own custom component styles here */
 
-.app {
-    @apply text-center;
-}
+@import '../components/Layout/Layout.css';
 
 
 .title {
-    @apply text-red-500 text-6xl font-thin inline bg-white px-2 py-1 rounded shadow;
+    @apply text-red-500 text-4xl font-thin inline bg-white px-2 py-1 ;
 }
 
 

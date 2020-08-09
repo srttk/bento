@@ -1,6 +1,6 @@
 export default {
     Query: {
-        hello: () => "Hello"
+        hello: () => "React GraphQL Starter using Next.js and Apollo"
     }
 }
 

@@ -3,3 +3,6 @@ build:
 
 clean:
 	rm -rf ./.next
+
+dev:
+	npx next

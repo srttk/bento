@@ -1,0 +1,13 @@
+.layout__wrapper {
+    @apply flex flex-col h-full max-w-screen-md mx-auto w-full;
+}
+.layout__wrapper header {
+    @apply bg-white  border-b border-gray-300;
+}
+.layout__wrapper main {
+    @apply bg-gray-100 flex-grow  bg-white p-2 font-mono text-gray-800;
+}
+
+.layout__wrapper footer {
+    @apply text-sm text-gray-600;
+}
