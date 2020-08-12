@@ -12,7 +12,7 @@ const HELLO_QUERY = `
 const Index: React.FC = () => {
     const { data, error, loading } = useQuery(HELLO_QUERY)
     return (
-        <Layout>
+        <Layout title="Welcome to bento">
         <div className="app">
             { error && <p>Error</p>}
             { loading && <p>Loading</p> }

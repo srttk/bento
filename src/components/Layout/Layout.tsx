@@ -1,10 +1,12 @@
 import React from 'react';
 import Banner from '@/components/Banner'
-const Layout = ({ children }) => {
+import MainNav from './MainNav'
+const Layout: React.FC<{ title : string | null}> = ({ children }) => {
     return (
         <div className="layout__wrapper">
-            <header>
+            <header className="flex items-center">
                 <Banner title="Bento"/>
+                <MainNav/>
             </header>
             <main>
                

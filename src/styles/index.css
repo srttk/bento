@@ -7,6 +7,10 @@ html, body, #__next {
     height: 100%;
 }
 
+body {
+    @apply bg-gray-100 text-gray-600;
+}
+
 /* Write your own custom base styles here */
 
 /* Start purging... */
@@ -16,6 +20,7 @@ html, body, #__next {
 /* Write you own custom component styles here */
 
 @import '../components/Layout/Layout.css';
+@import '../components/Layout/ManiNav.css';
 
 
 .title {
