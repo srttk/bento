@@ -10,7 +10,7 @@ const PURGECSS_OPTIONS = {
     "./src/pages/**/*.tsx",
     // etc.
   ],
-
+  whitelist: ["html", "body", "__next"],
   // Include any special characters you're using in this regular expression
   defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 };

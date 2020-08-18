@@ -1,0 +1,7 @@
+.page__404 {
+    @apply w-8/12 mx-auto mt-6 border border-red-500 p-6 rounded;
+}
+
+.page__error {
+    @apply text-xl text-red-500 font-light text-center;
+}

@@ -1,6 +1,5 @@
 /* purgecss start ignore */
 @tailwind base;
-/* purgecss end ignore */
 
 html, body, #__next {
     position: relative;
@@ -10,12 +9,18 @@ html, body, #__next {
 body {
     @apply bg-gray-100 text-gray-600;
 }
+/* purgecss end ignore */
+
+
 
 /* Write your own custom base styles here */
 
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
+
+/* Pages */
+@import './pages/404.css';
 
 /* Write you own custom component styles here */
 
