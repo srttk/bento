@@ -1,0 +1,9 @@
+.button {
+    @apply border border-red-500 bg-red-500 rounded px-2 py-1 ml-2 text-white;
+}
+.button:hover {
+    @apply bg-red-600;
+}
+.button:disabled {
+    @apply border border-gray-300 bg-gray-200 text-gray-500 cursor-not-allowed;
+}

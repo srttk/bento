@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '@/components/Banner'
 import MainNav from './MainNav'
-const Layout: React.FC<{ title : string | null}> = ({ children }) => {
+const Layout: React.FC<{ title ?: string}> = ({ children }) => {
     return (
         <div className="layout__wrapper">
             <header className="flex items-center">

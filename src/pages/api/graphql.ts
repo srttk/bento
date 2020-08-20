@@ -2,7 +2,8 @@ import { ApolloServer } from 'apollo-server-micro'
 import { schema } from '../../graphql'
 
 const graphqlServer = new ApolloServer({
-    schema
+    schema,
+    context: ({req, res}) => ({ req, res})
 })
 
 const handler = graphqlServer.createHandler({

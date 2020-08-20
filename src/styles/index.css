@@ -27,6 +27,8 @@ body {
 @import '../components/Layout/Layout.css';
 @import '../components/Layout/ManiNav.css';
 
+@import '../components/ui/TextInput/TextInput.css';
+@import '../components/ui/Button/Button.css';
 
 .title {
     @apply text-red-500 text-4xl font-thin inline bg-white px-2 py-1 ;
