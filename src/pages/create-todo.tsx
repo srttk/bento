@@ -37,7 +37,7 @@ const CreateTodo = () => {
     return (
         <Layout title="Create Todo">
             <div>
-                <TextInput name="description" value={state.description} type="text" onChange={handleChange} />
+                <TextInput placeholder="Type something" name="description" value={state.description} type="text" onChange={handleChange} />
                 <Button  disabled={loading} onClick={handleAddTodo}>
                     Add Todo
                 </Button>

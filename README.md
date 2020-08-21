@@ -10,4 +10,4 @@
 - [x] GraphQL Client Query
 - [x] Basic UI Layout
 - [ ] Prisma setup
-- [ ] GraphQL Client Mutation (Form submittion)
+- [x] GraphQL Client Mutation (Form submittion)

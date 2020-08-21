@@ -1,3 +1,9 @@
 .text-input {
-    @apply border border-red-500 rounded px-2 py-1 text-base;
+    @apply border border-red-500 rounded px-2 py-1 text-base shadow;
+}
+.text-input:focus {
+    @apply bg-gray-200;
+}
+.text-input::placeholder {
+    @apply text-red-300;
 }

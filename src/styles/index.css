@@ -31,7 +31,7 @@ body {
 @import '../components/ui/Button/Button.css';
 
 .title {
-    @apply text-red-500 text-4xl font-thin inline bg-white px-2 py-1 ;
+    @apply  text-4xl font-thin inline px-2 py-1 bg-clip-text text-transparent  bg-gradient-to-r from-red-400 to-indigo-700;
 }
 
 
