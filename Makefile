@@ -6,3 +6,13 @@ clean:
 
 dev:
 	npx next
+
+
+#Prisma 
+prisma-generate:
+	npx prisma generate
+migrate-save:
+	npx prisma migrate save --name init --experimental
+migrate-up:
+	npx prisma migrate up --experimental
+
