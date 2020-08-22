@@ -3,7 +3,7 @@ export default {
     Query: {
         hello: () => "React GraphQL Starter using Next.js and Apollo",
         todos: async () => {
-            const todos = await db.todo.findMany()
+            const todos = await db.todo.findMany({ orderBy:{ createdAt:"desc"}})
             return todos
         } 
     },

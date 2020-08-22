@@ -30,6 +30,8 @@ body {
 @import '../components/ui/TextInput/TextInput.css';
 @import '../components/ui/Button/Button.css';
 
+@import '../components/Todo/TodoItem.css';
+
 .title {
     @apply  text-4xl font-thin inline px-2 py-1 bg-clip-text text-transparent  bg-gradient-to-r from-red-400 to-indigo-700;
 }

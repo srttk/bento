@@ -20,7 +20,7 @@ const Index: React.FC = () => {
         </div>
         <h3 className="text-red-500 my-1 text-2xl font-sans font-thin">Sample Pages</h3>
         <ul className="list-disc list-inside px-6">
-            <li><Link href="/create-todo"><a className="text-red-500 underline">Mutation Example</a></Link></li>
+            <li><Link href="/todo"><a className="text-red-500 underline">Todo Example</a></Link></li>
         </ul>
         </Layout>
     );

@@ -1,4 +1,4 @@
-import useSWR from 'swr';
+import useSWR, { mutate } from 'swr';
 import { useState } from 'react';
 import { request } from 'graphql-request'
 
@@ -13,7 +13,8 @@ export function useQuery (gqlQuery, variables = {}) {
     return {
       data,
       loading: !error && !data,
-      error
+      error,
+      refresh: () => mutate(key)
     }
   }
 
