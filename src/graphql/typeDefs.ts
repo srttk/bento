@@ -8,6 +8,8 @@ type Query {
 
 type Mutation {
     addTodo(description:String):Todo!
+    changeStatus(id: ID, completed: Boolean):Todo!
+    deleteTodo(id:ID): Boolean
 }
 
 type Todo {

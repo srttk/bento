@@ -16,7 +16,7 @@ const Index: React.FC = () => {
         <div className="app">
             { error && <p>Error</p>}
             { loading && <p>Loading</p> }
-            {data && <p className="text-center text-xl md:text-2xl  py-4 md:py-8 font-sans font-thin">{data.hello}</p>}
+            {data && <p className="text-intro">{data.hello}</p>}
         </div>
         <h3 className="text-red-500 my-1 text-2xl font-sans font-thin">Sample Pages</h3>
         <ul className="list-disc list-inside px-6">

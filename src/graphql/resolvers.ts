@@ -15,6 +15,21 @@ export default {
             let todo  = await db.todo.create({ data: { description} })
 
             return todo
+        },
+
+        async changeStatus(parent, args, context, info) {
+            const { id, completed } = args
+            const todo  = await db.todo.update({
+                where:{ id: +id},
+                data: { completed}
+            })
+
+            return todo
+        },
+        async deleteTodo(parent, args, context, info) {
+            const { id } = args
+
+         await db.todo.delete({where:{ id}})
         }
     }
 }

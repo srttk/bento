@@ -1,3 +1,18 @@
 .todo__item {
-    @apply py-2 px-3 shadow-sm;
+    @apply py-2 px-3 shadow-sm flex;
+}
+
+.todo__item--text {
+    @apply flex-grow;
+}
+
+
+.todo__item--completed .todo__item--text {
+    text-decoration: line-through;
+    color: #f56;
+
+}
+
+.todo__item--check {
+    @apply text-red-500;
 }

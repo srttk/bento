@@ -1,0 +1,3 @@
+.text-intro {
+    @apply text-center text-3xl  py-8 font-sans font-thin;
+}

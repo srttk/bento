@@ -21,6 +21,7 @@ body {
 
 /* Pages */
 @import './pages/404.css';
+@import './pages/index.css';
 
 /* Write you own custom component styles here */
 
