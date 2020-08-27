@@ -6,7 +6,10 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --config .prettierrc 'src/**/*.tsx' --write"
+    "format": "prettier --config .prettierrc 'src/**/*.tsx' --write",
+    "generate":"prisma generate",
+    "migrate:up":"prisma migrate up --experimental",
+    "setup":"cp ./prisma/.env.sample ./prisma/.env && npm run generate && prisma migrate save --name init --experimental && npm run migrate:up"
   },
   "keywords": [],
   "author": "",
