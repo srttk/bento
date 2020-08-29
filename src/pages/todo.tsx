@@ -38,7 +38,8 @@ const CreateTodo = () => {
   async function handleAddTodo() {
     let data = await addTodo(state);
     refresh();
-    console.log(data);
+    setState({ description: '' });
+
   }
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
@@ -49,7 +50,7 @@ const CreateTodo = () => {
 
   return (
     <Layout title="Todo">
-      <div>
+      <form onSubmit={handleAddTodo}>
         <TextInput
           placeholder="Type something"
           name="description"
@@ -57,10 +58,10 @@ const CreateTodo = () => {
           type="text"
           onChange={handleChange}
         />
-        <Button disabled={loading} onClick={handleAddTodo}>
+        <Button type="submit" disabled={loading} onClick={handleAddTodo}>
           Add Todo
         </Button>
-      </div>
+      </form>
       {data && (
         <div className="space-y-2">
           {data.todos.map((todo) => (

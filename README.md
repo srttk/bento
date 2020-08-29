@@ -1,4 +1,4 @@
-# A React Graphql Starter
+# Fullstack React Graphql 
 
 - React / Nextjs
 - Apollo Graphql Server
@@ -8,30 +8,75 @@
 ## Install
 
 #### Clone repo
-`bash
+```bash
     git clone https://github.com/saratonite/bento.git
-`
+```
 
 #### Install node dependencies
-`bash
-npm install 
-OR
-yarn install
-`
+**npm**
 
-#### Run Setup Script
-`bash
+```bash
+npm install 
+```
+
+**yarn**
+
+```bash
+yarn install 
+```
+
+
+#### Run Setup Script 
+To initial prisma client generation and migrations
+
+**npm**
+
+```bash
 npm run setup
-OR
+```
+
+**yarn**
+```bash
 yarn setup
-`
+```
 
 #### Run Development mode
-`yarn dev OR npm run dev`
+**npm**
+
+```bash
+npm run dev
+```
+
+**yarn**
+
+```bash
+yarn dev
+```
 
 
 ## Build
-`yarn build OR npm run build`
+**npm**
+```bash
+npm run build
+```
+**yarn**
+
+```bash
+yarn build
+```
+
+## Run Ptoduction Mode
+ First build the app then run start script
+ **npm**
+ ```bash
+ npm start
+ ```
+
+  **yarn**
+ ```bash
+ yarn start
+ ```
+
 
 
 
