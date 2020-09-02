@@ -7,3 +7,7 @@
 .button:disabled {
     @apply border border-gray-300 bg-gray-200 text-gray-500 cursor-not-allowed;
 }
+
+.button__small {
+    @apply text-xs;
+}

@@ -3,6 +3,7 @@ import { useMutation, useQuery } from '@/lib/gql-client';
 import Layout from '@/components/Layout';
 import TextInput from '@/components/ui/TextInput';
 import Button from '@/components/ui/Button';
+import ErrorMessage from '@/components/ui/ErrorMessage';
 import TodoItem from '@/components/Todo/TodoItem';
 
 const ADD_TODO_MUTATION = `
@@ -33,7 +34,7 @@ const CreateTodo = () => {
     ADD_TODO_MUTATION
   );
 
-  const { data, loading: todosLoading, refresh } = useQuery(GET_TODOS);
+  const { data, loading: todosLoading, refresh, error } = useQuery(GET_TODOS);
 
   async function handleAddTodo() {
     let data = await addTodo(state);
@@ -62,6 +63,7 @@ const CreateTodo = () => {
           Add Todo
         </Button>
       </form>
+      {error && <ErrorMessage error={error} refresh={refresh}/>}
       {data && (
         <div className="space-y-2">
           {data.todos.map((todo) => (

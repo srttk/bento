@@ -1,4 +1,4 @@
-# Fullstack React Graphql 
+# :bento: Bento - Minimal Fullstack React Graphql 
 
 - React / Nextjs
 - Apollo Graphql Server

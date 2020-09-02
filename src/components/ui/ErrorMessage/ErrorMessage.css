@@ -1,0 +1,13 @@
+.error__message {
+    @apply border border-solid border-red-500 rounded-md p-3 flex justify-between items-center shadow-sm my-2;
+}
+
+.error__message--title {
+
+    @apply text-red-500 text-3xl  border-r border-red-400 px-1;
+
+}
+
+.error__message--description {
+    @apply text-red-500 text-base px-2 flex-grow;
+}

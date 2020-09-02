@@ -4,7 +4,15 @@ import { request } from 'graphql-request'
 
 const GQL_BASE_URL = `/api/graphql`
 
-export function useQuery (gqlQuery, variables = {}) {
+
+interface QueryState {
+  data?:any
+  loading: boolean
+  error: any
+  refresh(): Promise<any>
+}
+
+export function useQuery (gqlQuery: string, variables:any = {}): QueryState {
   
     const key = [gqlQuery];
     key.push(JSON.stringify(variables))
