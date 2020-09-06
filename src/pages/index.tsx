@@ -29,6 +29,11 @@ const Index: React.FC = () => {
             <a className="text-red-500 underline">Todo Example</a>
           </Link>
         </li>
+        <li>
+          <Link href="/ssr">
+            <a className="text-red-500 underline">Server Side Rendering</a>
+          </Link>
+        </li>
       </ul>
     </Layout>
   );

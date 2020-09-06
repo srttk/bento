@@ -1,8 +1,9 @@
 import useSWR, { mutate } from 'swr';
 import { useState } from 'react';
 import { request } from 'graphql-request'
+import { NextPageContext } from 'next'
 
-const GQL_BASE_URL = `/api/graphql`
+const GQL_BASE_URL = `http://localhost:3000/api/graphql`
 
 
 interface QueryState {
@@ -17,7 +18,7 @@ export function useQuery (gqlQuery: string, variables:any = {}): QueryState {
     const key = [gqlQuery];
     key.push(JSON.stringify(variables))
 
-    const { data, error } = useSWR(key, (query, variables) => request(GQL_BASE_URL,query, variables))
+    const { data, error } = useSWR(key, (query, variables) => rawRequest(query, variables))
     return {
       data,
       loading: !error && !data,
@@ -29,6 +30,7 @@ export function useQuery (gqlQuery: string, variables:any = {}): QueryState {
 export function rawRequest(query:any, variables?:any) {
   return request(GQL_BASE_URL,query, variables)
 }
+
 
 interface IQueryState<T> {
   loading: boolean
