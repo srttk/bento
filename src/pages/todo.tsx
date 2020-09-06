@@ -40,7 +40,6 @@ const CreateTodo = () => {
     let data = await addTodo(state);
     refresh();
     setState({ description: '' });
-
   }
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
@@ -63,7 +62,7 @@ const CreateTodo = () => {
           Add Todo
         </Button>
       </form>
-      {error && <ErrorMessage error={error} refresh={refresh}/>}
+      {error && <ErrorMessage error={error} refresh={refresh} />}
       {data && (
         <div className="space-y-2">
           {data.todos.map((todo) => (

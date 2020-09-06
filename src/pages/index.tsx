@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useQuery } from '@/lib/gql-client';
-import ErrorMessage from '@/components/ui/ErrorMessage'
+import ErrorMessage from '@/components/ui/ErrorMessage';
 import Layout from '@/components/Layout';
 
 const HELLO_QUERY = `
@@ -15,10 +15,9 @@ const Index: React.FC = () => {
   return (
     <Layout title="Welcome to bento">
       <div className="app">
-        {error && <ErrorMessage error={error} refresh={refresh}/>}
+        {error && <ErrorMessage error={error} refresh={refresh} />}
         {loading && <p>Loading</p>}
         {data && <p className="text-intro">{data.hello}</p>}
-        
       </div>
       <h3 className="text-red-500 my-1 text-2xl font-sans font-thin">
         Sample Pages
