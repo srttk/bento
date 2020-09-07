@@ -1,10 +1,8 @@
 import useSWR, { mutate } from 'swr';
 import { useState } from 'react';
 import { request } from 'graphql-request'
-import { NextPageContext } from 'next'
 
-const GQL_BASE_URL = `http://localhost:3000/api/graphql`
-
+const GQL_BASE_URL = process.env.NEXT_PUBLIC_GRAPHQL_BASE 
 
 interface QueryState {
   data?:any
