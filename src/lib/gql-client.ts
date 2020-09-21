@@ -1,6 +1,6 @@
 import useSWR, { mutate } from 'swr';
 import { useState } from 'react';
-import { request } from 'graphql-request'
+import { GraphQLClient } from 'graphql-request'
 
 const GQL_BASE_URL = process.env.NEXT_PUBLIC_GRAPHQL_BASE 
 
@@ -10,6 +10,9 @@ interface QueryState {
   error: any
   refresh(): Promise<any>
 }
+
+export const GqlClient = new GraphQLClient(GQL_BASE_URL, {})
+
 
 export function useQuery (gqlQuery: string, variables:any = {}): QueryState {
   
@@ -26,7 +29,7 @@ export function useQuery (gqlQuery: string, variables:any = {}): QueryState {
   }
 
 export function rawRequest(query:any, variables?:any) {
-  return request(GQL_BASE_URL,query, variables)
+  return GqlClient.request(query, variables)
 }
 
 
