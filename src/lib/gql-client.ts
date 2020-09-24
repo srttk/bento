@@ -1,6 +1,7 @@
 import useSWR, { mutate } from 'swr';
 import { useState } from 'react';
 import { GraphQLClient } from 'graphql-request'
+import { RequestDocument, Variables } from 'graphql-request/dist/types';
 
 const GQL_BASE_URL = process.env.NEXT_PUBLIC_GRAPHQL_BASE 
 
@@ -11,10 +12,14 @@ interface QueryState {
   refresh(): Promise<any>
 }
 
+interface RequestHeaders {
+  [key:string]: string
+}
+
+
 export const GqlClient = new GraphQLClient(GQL_BASE_URL, {})
 
-
-export function useQuery (gqlQuery: string, variables:any = {}): QueryState {
+export function useQuery (gqlQuery: RequestDocument, variables:Variables = {}): QueryState {
   
     const key = [gqlQuery];
     key.push(JSON.stringify(variables))
@@ -28,7 +33,11 @@ export function useQuery (gqlQuery: string, variables:any = {}): QueryState {
     }
   }
 
-export function rawRequest(query:any, variables?:any) {
+export function rawRequest(query:RequestDocument, variables?:Variables,headers: null | RequestHeaders = null ) {
+
+  if(headers) {
+    GqlClient.setHeaders(headers)
+  }
   return GqlClient.request(query, variables)
 }
 
@@ -46,11 +55,11 @@ interface IMutationState<T> {
   errors?: object[]
 }
 
-export function useMutation<T>(query:any):[IMutationState<T>, (vars: any) => Promise<T | void>]  {
+export function useMutation<T>(query:RequestDocument):[IMutationState<T>, (vars: Variables) => Promise<T | void>]  {
 
   const [state, setState] = useState<IQueryState<T>>({ loading: false })
 
-  const execute = (variables:any) => {
+  const execute = (variables:Variables) => {
     setState({loading: true })
     return rawRequest(query, variables).then(data => {
       setState({data, loading:false})
