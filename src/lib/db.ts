@@ -1,9 +1,9 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@prisma/client';
 
 const log = []; // ['query', 'info', 'warn']
 
 const db = new PrismaClient({
-    log
-})
+  log
+});
 
-export default db
+export default db;
