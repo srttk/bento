@@ -1,17 +1,11 @@
 module.exports = {
-  purge: {
-    enabled: false, // Not getting expected result so default purgeccs disabled
-    content: ["./src/components/**/*.tsx", "./src/pages/**/*.tsx"],
-    options: {
-      whitelist: ["html", "body", "__next"],
-    },
-  },
+  purge: { enabled: false },
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {}
   },
-  variants: {},
-  plugins: [],
-  future: {
-    removeDeprecatedGapUtilities: true,
+  variants: {
+    extend: {}
   },
+  plugins: []
 };
